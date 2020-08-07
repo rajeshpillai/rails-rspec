@@ -23,6 +23,20 @@ RSpec.describe User, type: :model do
 
     end
   end
+
   context 'scope tests' do 
+    before(:each) do 
+      User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com').save
+      User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com').save
+      User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com').save
+      User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com', active: false).save
+      User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com', active: false).save
+    end
+
+    it "" do 
+    end
+
+    it "" do 
+    end
   end
 end
