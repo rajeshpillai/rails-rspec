@@ -13,3 +13,9 @@
 
 - Create rspec for controler
   rails g rspec:request users
+
+- Guard
+   gem 'guard-rspec', require: false
+   bundle exec guard init rspec
+
+   bundle exec guard # to run the watcher
