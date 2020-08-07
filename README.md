@@ -26,3 +26,8 @@
   In spec_helper.rb add
     - require 'simplecov'
     - SimpleCov.start
+
+- Install FactoryBot
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'factory_bot'
+
