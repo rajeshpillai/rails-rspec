@@ -25,18 +25,23 @@ RSpec.describe User, type: :model do
   end
 
   context 'scope tests' do 
+    
+    let (:params) { {User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com'} }
+
     before(:each) do 
-      User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com').save
-      User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com').save
-      User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com').save
-      User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com', active: false).save
-      User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com', active: false).save
+      User.new(params).save 
+      User.new(params).save 
+      User.new(params.merge(active: true)).save 
+      User.new(params.merge(active:false)).save 
+      User.new(params.merge(active:false)).save 
     end
 
-    it "" do 
+    it "should return active users" do 
+      expect(User.active_users.size).to eq(3)
     end
 
-    it "" do 
+    it "should return inactive users" do 
+      expect(User.inactive_users.size).to eq(2)
     end
   end
 end
