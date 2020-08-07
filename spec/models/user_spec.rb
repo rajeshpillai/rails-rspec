@@ -26,7 +26,7 @@ RSpec.describe User, type: :model do
 
   context 'scope tests' do 
     
-    let (:params) { {User.new(first_name: 'First', last_name: 'Last', email: 'test@example.com'} }
+    let (:params) { {first_name: 'First', last_name: 'Last', email: 'test@example.com'} }
 
     before(:each) do 
       User.new(params).save 
@@ -37,11 +37,11 @@ RSpec.describe User, type: :model do
     end
 
     it "should return active users" do 
-      expect(User.active_users.size).to eq(3)
+      expect(User.active_users.size).to eq(1)
     end
 
     it "should return inactive users" do 
-      expect(User.inactive_users.size).to eq(2)
+      expect(User.inactive_users.size).to eq(4)
     end
   end
 end
