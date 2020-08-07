@@ -29,5 +29,17 @@
 
 - Install FactoryBot
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-  gem 'factory_bot'
+  gem 'factory_bot_rails'
+
+  Update rails_helper.rb
+  - # require 'support/factory_bot'
+
+# The below code will automatically     
+   # require factory_bot
+   Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f}
+
+# Create a support folder in the specs for
+  - factories (and create your factories here)
+    - users.rb  (factory)
+
 
