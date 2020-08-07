@@ -10,3 +10,6 @@
 
 - Create rspec model
   rails g rspec:model user 
+
+- Create rspec for controler
+  rails g rspec:controller users
