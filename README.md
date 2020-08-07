@@ -19,3 +19,10 @@
    bundle exec guard init rspec
 
    bundle exec guard # to run the watcher
+
+- Add code coverage
+  gem 'simplecov', require: false, group: :test
+
+  In spec_helper.rb add
+    - require 'simplecov'
+    - SimpleCov.start
