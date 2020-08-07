@@ -12,4 +12,4 @@
   rails g rspec:model user 
 
 - Create rspec for controler
-  rails g rspec:controller users
+  rails g rspec:request users
