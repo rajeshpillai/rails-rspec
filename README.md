@@ -1,4 +1,4 @@
-# Steps to setup up new rails project with RSPect
+# Steps to setup up new rails project with RSpec
 
 - rails new <project-name> -T
 - In Gemfile ->  gem 'rspec-rails'
